@@ -25,6 +25,15 @@
 @import "@ionic/angular/css/text-transformation.css";
 @import "@ionic/angular/css/flex-utils.css";
 
+.box {
+  border: 2px solid black;
+  padding: 10px;
+}
+
+.box h4{
+  color:rgb(196, 112, 9)
+}
+
 /**
  * Ionic Dark Mode
  * -----------------------------------------------------
@@ -34,4 +43,11 @@
 
 /* @import "@ionic/angular/css/palettes/dark.always.css"; */
 /* @import "@ionic/angular/css/palettes/dark.class.css"; */
-@import "@ionic/angular/css/palettes/dark.system.css";
+// @import "@ionic/angular/css/palettes/dark.system.css";
+ion-action-sheet.action-sheet-box {
+  --background: #e6edf3;
+}
+
+ion-action-sheet.action-sheet-box .action-sheet-button.danger{
+  color: red;
+}
