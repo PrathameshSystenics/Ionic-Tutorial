@@ -1,0 +1,115 @@
+<div class="box">
+  <h4>Simple Components</h4>
+  <div>
+    <h5>Chips</h5>
+    <ion-chip> Default </ion-chip>
+    <ion-chip outline="true"> Outline </ion-chip>
+    <ion-chip color="warning">Colored Chips</ion-chip>
+  </div>
+
+  <div>
+    <h5>Grid</h5>
+    <ion-grid>
+      <ion-row>
+        <ion-col>1</ion-col>
+        <ion-col>2</ion-col>
+        <ion-col>3</ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>4</ion-col>
+        <ion-col offset="3">5</ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
+
+  <div>
+    <h5>Icons</h5>
+    <ion-icon name="keypad-outline" size="large"></ion-icon>
+    <ion-icon name="log-in-outline"></ion-icon>
+  </div>
+
+  <div>
+    <h5>Items</h5>
+    <ion-list class="ion-list-box">
+      <ion-list-header> Buttons </ion-list-header>
+      <ion-item>
+        <ion-icon name="bluetooth-sharp" slot="start"></ion-icon>
+        <ion-label>Bluetooth</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-icon name="wifi-sharp" slot="start"></ion-icon>
+        <ion-label>Wifi</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-icon name="location-sharp" slot="start"></ion-icon>
+        <ion-label>Location</ion-label>
+      </ion-item>
+    </ion-list>
+  </div>
+
+  <div>
+    <h5>Item Sliding</h5>
+    <ion-list class="ion-sliding-box">
+      <ion-list-header>
+        <ion-label>Messages</ion-label>
+        <ion-icon name="mail-outline" size="medium"></ion-icon>
+      </ion-list-header>
+      <ion-item-sliding #item1 id="ion-sliding">
+        <ion-item>
+          <ion-label> Message from Google </ion-label>
+        </ion-item>
+        <ion-item-options side="end">
+          <ion-item-option
+            color="danger"
+            (click)="deleteMessage('ion-sliding')"
+          >
+            <ion-icon name="trash"></ion-icon>
+            Delete
+          </ion-item-option>
+        </ion-item-options>
+        <ion-item-options side="start">
+          <ion-item-option color="success">
+            <ion-icon name="archive"></ion-icon>
+            archive
+          </ion-item-option>
+        </ion-item-options>
+      </ion-item-sliding>
+      <ion-item-sliding #item1 id="ion-sliding2">
+        <ion-item>
+          <ion-label> Message from Microsoft </ion-label>
+        </ion-item>
+        <ion-item-options side="end">
+          <ion-item-option
+            color="danger"
+            (click)="deleteMessage('ion-sliding2')"
+          >
+            <ion-icon name="trash"></ion-icon>
+            Delete
+          </ion-item-option>
+        </ion-item-options>
+        <ion-item-options side="start">
+          <ion-item-option color="success">
+            <ion-icon name="archive"></ion-icon>
+            archive
+          </ion-item-option>
+        </ion-item-options>
+      </ion-item-sliding>
+    </ion-list>
+  </div>
+
+  <!-- Loading -->
+  <div>
+    <h5>Loading Overlay</h5>
+    <ion-button
+      color="primary"
+      (click)="loadData()"
+      expand="block"
+      fill="solid"
+    >
+      Load the Data
+    </ion-button>
+    <ion-loading [isOpen]="showLoading" message="Loading the Data Wait for 2 Seconds">
+     <p>Loading the Data</p>
+    </ion-loading>
+  </div>
+</div>

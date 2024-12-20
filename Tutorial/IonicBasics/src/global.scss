@@ -30,8 +30,13 @@
   padding: 10px;
 }
 
-.box h4{
-  color:rgb(196, 112, 9)
+.box h4 {
+  color: rgb(196, 112, 9);
+}
+
+.box h5 {
+  color: darkcyan;
+  font-size: 15px;
 }
 
 /**
@@ -48,6 +53,21 @@ ion-action-sheet.action-sheet-box {
   --background: #e6edf3;
 }
 
-ion-action-sheet.action-sheet-box .action-sheet-button.danger{
+ion-action-sheet.action-sheet-box .action-sheet-button.danger {
   color: red;
 }
+
+ion-accordion-group ion-accordion ion-item {
+  background-color: lightcoral;
+}
+
+ion-toast.toast-document {
+  --color: white;
+  --background: rgb(22, 163, 22);
+}
+
+ion-modal.sheet-modal ion-toolbar {
+  --background: rgb(14 116 144);
+  --color: white;
+}
+
