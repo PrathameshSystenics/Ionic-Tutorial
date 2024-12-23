@@ -1,5 +1,16 @@
-import { Component, OnDestroy, OnInit } from '@angular/core';
 import {
+  Component,
+  inject,
+  OnDestroy,
+  OnInit,
+  ViewChild,
+  viewChild,
+} from '@angular/core';
+import { Clipboard } from '@capacitor/clipboard';
+import {
+  IonInput,
+  IonText,
+  ToastController,
   ViewDidEnter,
   ViewDidLeave,
   ViewWillEnter,
@@ -23,6 +34,9 @@ export class MorePage
 {
   constructor() {}
 
+  toastcontroller: ToastController = inject(ToastController);
+
+
   ngOnInit() {
     console.log('Page on Init');
   }
@@ -45,5 +59,26 @@ export class MorePage
 
   ionViewDidLeave(): void {
     console.log('View Did leave');
+  }
+
+  async copyToClipBoard(input: IonInput) {
+    await Clipboard.write({
+      string: input.value?.toString(),
+    });
+
+    const toast = await this.toastcontroller.create({
+      message: 'Copied the Message',
+      icon: 'clipboard',
+      color: 'primary',
+      duration: 2000,
+    });
+    input.value = '';
+    await toast.present();
+  }
+
+  async getFromClipBoard() {
+    const datagotfromclipboard = await Clipboard.read();
+    const divele = document.getElementById('text-box') as HTMLDivElement;
+    divele.innerHTML = datagotfromclipboard.value;
   }
 }
