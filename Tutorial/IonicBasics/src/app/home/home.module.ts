@@ -13,6 +13,8 @@ import { InputsComponent } from '../components/inputs/inputs.component';
 import { SimpleComponent } from '../components/simple/simple.component';
 import { MenusComponent } from '../components/menus/menus.component';
 import { ModalComponent } from '../components/modal/modal.component';
+import { DetailComponent } from '../components/detail/detail.component';
+import { TabsnavComponent } from '../components/tabsnav/tabsnav.component';
 
 @NgModule({
   imports: [CommonModule, FormsModule, IonicModule, HomePageRoutingModule],
@@ -26,6 +28,7 @@ import { ModalComponent } from '../components/modal/modal.component';
     SimpleComponent,
     MenusComponent,
     ModalComponent,
+    DetailComponent,
   ],
 })
 export class HomePageModule {}

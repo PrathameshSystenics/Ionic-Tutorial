@@ -12,8 +12,21 @@
     </ion-toolbar>
   </ion-header>
   <ion-content class="ion-padding">
-    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa in velit quas
-    deleniti iusto cumque animi ad sed repellat hic modi non, tenetur
-    asperiores?
+    <div>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa in velit
+      quas deleniti iusto cumque animi ad sed repellat hic modi non, tenetur
+      asperiores?
+    </div>
+    <ion-list>
+      <ion-list-header> Navigate </ion-list-header>
+      <ion-item routerLink="detail">
+        <ion-label>Detail </ion-label>
+        <ion-icon name="ellipsis-vertical-outline"></ion-icon>
+      </ion-item>
+      <ion-item routerLink="/">
+        <ion-label>Home</ion-label>
+        <ion-icon name="home-outline"></ion-icon>
+      </ion-item>
+    </ion-list>
   </ion-content>
 </ion-menu>

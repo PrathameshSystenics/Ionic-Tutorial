@@ -1,6 +1,6 @@
 <app-menus></app-menus>
 <div id="main-content" class="ion-page">
-  <ion-header id="header">
+  <ion-header id="header" [translucent]="true">
     <ion-toolbar>
       <ion-title> Home Page </ion-title>
       <ion-buttons slot="start">
@@ -10,14 +10,11 @@
       </ion-buttons>
     </ion-toolbar>
   </ion-header>
-  <ion-content [scrollEvents]="true" (ionScroll)="scrollContent($event)">
+  <ion-content [scrollEvents]="true">
     <!-- ion fab bottom or top button -->
     <ion-fab slot="fixed" vertical="start" horizontal="end" class="bottom-up">
       <ion-fab-button size="small" type="button" (click)="navigateBottomUp()">
-        <ion-icon
-        id="icon-up-down"
-          [name]="'chevron-down-outline'"
-        ></ion-icon>
+        <ion-icon id="icon-up-down" [name]="'chevron-down-outline'"></ion-icon>
       </ion-fab-button>
     </ion-fab>
 
@@ -28,6 +25,8 @@
     <app-inputs></app-inputs>
     <app-simple></app-simple>
     <app-modal></app-modal>
+
+
 
     <!-- ion fab button -->
     <ion-fab slot="fixed" vertical="bottom" horizontal="end">

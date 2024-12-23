@@ -108,8 +108,83 @@
     >
       Load the Data
     </ion-button>
-    <ion-loading [isOpen]="showLoading" message="Loading the Data Wait for 2 Seconds">
-     <p>Loading the Data</p>
+    <ion-loading
+      [isOpen]="showLoading"
+      message="Loading the Data Wait for 2 Seconds"
+    >
+      <p>Loading the Data</p>
     </ion-loading>
+  </div>
+
+  <!-- ion refresher content -->
+  <div>
+    <h5>Refresher</h5>
+    <p>Pull the Content Down to get the spinner</p>
+    <ion-refresher
+      slot="fixed"
+      (ionRefresh)="refreshData($event)"
+      pullFactor="0.5"
+      pullMin="200"
+      pullMax="700"
+    >
+      <ion-refresher-content
+        pullingIcon="chevron-down-circle-outline"
+        pullingText="Pull to refresh"
+        refreshingSpinner="circles"
+        refreshingText="Refreshing..."
+      >
+      </ion-refresher-content>
+    </ion-refresher>
+  </div>
+
+  <!-- handle reorder -->
+  <div>
+    <h5>Handle Reorder</h5>
+    <ion-reorder-group [disabled]="false" (ionItemReorder)="doReorder($event)">
+      <ion-reorder>
+        <div class="mini-box">1</div>
+      </ion-reorder>
+      <ion-reorder>
+        <div class="mini-box">2</div>
+      </ion-reorder>
+      <ion-reorder>
+        <div class="mini-box">3</div>
+      </ion-reorder>
+      <ion-reorder>
+        <div class="mini-box">4</div>
+      </ion-reorder>
+      <ion-reorder>
+        <div class="mini-box">5</div>
+      </ion-reorder>
+    </ion-reorder-group>
+  </div>
+
+  <!-- toast -->
+  <div>
+    <h5>Toast</h5>
+    <button>Click me</button>
+    <ion-button color="warning" expand="block" id="toast-show"
+      >Show Toast</ion-button
+    >
+    <ion-toast
+      trigger="toast-show"
+      message="Showing the toast"
+      icon="bus-outline"
+      duration="2000"
+      position="top"
+      positionAnchor="header"
+      animated="true"
+      [color]="'warning'"
+    >
+    </ion-toast>
+  </div>
+
+  <div>
+    <h5>Toggle</h5>
+    <ion-toggle (ionChange)="enableExtraOptions($event)"> Show Extra Details </ion-toggle>
+    <div *ngIf="toShowExtraDetails" class="ion-color-warning ion-padding">
+      <ion-icon name="alert-circle-outline"></ion-icon>
+      These are the Extra Details i Want to Show
+    </div>
   </div>
 </div>

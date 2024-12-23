@@ -47,7 +47,7 @@ export class HomePage {
     }
   }
 
-  scrollContent(event: IonContentCustomEvent<ScrollDetail>) {
+  /* scrollContent(event: IonContentCustomEvent<ScrollDetail>) {
     const element = document.getElementById('icon-up-down');
     if (event.detail.currentY > 0) {
       this.scrollDirection = 'Top';
@@ -56,5 +56,5 @@ export class HomePage {
     } else {
 
     }
-  }
+  } */
 }
