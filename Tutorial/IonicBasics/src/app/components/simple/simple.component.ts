@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Haptics } from '@capacitor/haptics';
+import { Toast } from '@capacitor/toast';
 import {
   IonItemSliding,
   ItemReorderEventDetail,
@@ -43,5 +45,16 @@ export class SimpleComponent implements OnInit {
 
   enableExtraOptions(event: CustomEvent<ToggleChangeEventDetail>) {
     this.toShowExtraDetails = event.detail.checked;
+  }
+
+  async showToast() {
+    await Toast.show({
+      text: 'You Triggered the Toast Notification',
+      position: 'bottom',
+    });
+  }
+
+  async vibratePhone() {
+    await Haptics.vibrate();
   }
 }

@@ -15,9 +15,16 @@ import { MenusComponent } from '../components/menus/menus.component';
 import { ModalComponent } from '../components/modal/modal.component';
 import { DetailComponent } from '../components/detail/detail.component';
 import { TabsnavComponent } from '../components/tabsnav/tabsnav.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 @NgModule({
-  imports: [CommonModule, FormsModule, IonicModule, HomePageRoutingModule],
+  imports: [
+    CommonModule,
+    FormsModule,
+    IonicModule,
+    HomePageRoutingModule,
+    FontAwesomeModule,
+  ],
   declarations: [
     HomePage,
     ActionSheetComponent, // adding our custom component

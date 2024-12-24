@@ -181,10 +181,31 @@
 
   <div>
     <h5>Toggle</h5>
-    <ion-toggle (ionChange)="enableExtraOptions($event)"> Show Extra Details </ion-toggle>
+    <ion-toggle (ionChange)="enableExtraOptions($event)">
+      Show Extra Details
+    </ion-toggle>
     <div *ngIf="toShowExtraDetails" class="ion-color-warning ion-padding">
       <ion-icon name="alert-circle-outline"></ion-icon>
       These are the Extra Details i Want to Show
     </div>
+  </div>
+
+  <div>
+    <h5>Show Toast by plugin</h5>
+    <ion-button expand="block" fill="outline" (click)="showToast()"
+      >Show Plugin Toast</ion-button
+    >
+  </div>
+
+  <div>
+    <h5>Vibrate Your Phone</h5>
+    <ion-button
+      (click)="vibratePhone()"
+      expand="block"
+      fill="outline"
+      color="danger"
+      >Vibrate Your Phone
+      <fa-icon icon="faCoffee"></fa-icon>
+    </ion-button>
   </div>
 </div>

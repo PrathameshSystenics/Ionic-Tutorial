@@ -1,5 +1,6 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
-import { IonContent, ToastController } from '@ionic/angular';
+import { App } from '@capacitor/app';
+import { IonContent, Platform, ToastController } from '@ionic/angular';
 import { IonContentCustomEvent, ScrollDetail } from '@ionic/core';
 
 @Component({
@@ -57,4 +58,8 @@ export class HomePage {
 
     }
   } */
+
+  exitApp() {
+    App.exitApp();
+  }
 }

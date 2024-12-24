@@ -8,6 +8,11 @@
           <ion-menu-button></ion-menu-button>
         </ion-menu-toggle>
       </ion-buttons>
+      <ion-buttons slot="end">
+        <ion-button size="large" shape="round" color="danger" fill="solid" class="padding-xy-8" (click)="exitApp()">
+          <ion-icon name="exit-outline"></ion-icon>
+        </ion-button>
+      </ion-buttons>
     </ion-toolbar>
   </ion-header>
   <ion-content [scrollEvents]="true">

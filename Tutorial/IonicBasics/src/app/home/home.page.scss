@@ -11,9 +11,11 @@
   transition: rotate 0.5s ease-in;
 }
 
-.bottom-up ion-fab-button ion-icon.inactive{
+.bottom-up ion-fab-button ion-icon.inactive {
   rotate: 0deg;
   transition: rotate 0.5s ease-in;
 }
 
-
+ion-button.padding-xy-8::part(native) {
+  padding: 6px 6px;
+}

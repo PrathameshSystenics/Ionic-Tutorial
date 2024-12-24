@@ -12,7 +12,7 @@ import { TabsnavComponent } from './components/tabsnav/tabsnav.component';
   imports: [
     BrowserModule,
     IonicModule.forRoot({
-      mode: 'md', // you can change the mode either to IOS or MD
+      // mode: 'md', // you can change the mode either to IOS or MD
     }),
     AppRoutingModule,
   ],

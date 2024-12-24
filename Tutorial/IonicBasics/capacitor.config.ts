@@ -2,7 +2,7 @@ import type { CapacitorConfig } from '@capacitor/cli';
 
 const config: CapacitorConfig = {
   appId: 'com.Tut.Ionic',
-  appName: 'IonicBasics',
+  appName: 'Ionic Tutorial',
   webDir: 'www'
 };
 
