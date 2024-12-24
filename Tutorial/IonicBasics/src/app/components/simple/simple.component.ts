@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Haptics } from '@capacitor/haptics';
 import { Toast } from '@capacitor/toast';
+import { faMobileScreen } from '@fortawesome/free-solid-svg-icons';
 import {
   IonItemSliding,
   ItemReorderEventDetail,
@@ -17,6 +18,7 @@ import {
 export class SimpleComponent implements OnInit {
   showLoading: boolean = false;
   toShowExtraDetails: boolean = false;
+  famobilescreen = faMobileScreen;
   constructor() {}
 
   ngOnInit() {}
